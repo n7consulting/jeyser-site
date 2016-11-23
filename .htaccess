@@ -1,0 +1,7 @@
+Options +FollowSymLinks +Multiviews
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule (.*) index.php/$1
