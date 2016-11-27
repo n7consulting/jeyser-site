@@ -7,7 +7,7 @@
             /** @var array $menu */
             foreach ($menu as $m => $text) {
                 ?>
-                <li><a href="/<?php echo (is_dir('txt/'.$route[0]) ? $route[0].'/'.$m: $m); ?>"><?php echo ucfirst($text); ?></a></li>
+                <li><a href="<?php echo ($route[0] !== "" && is_dir('txt/'.$route[0]) ? '/'.$route[0].'/'.$m: $m); ?>"><?php echo ucfirst($text); ?></a></li>
                 <?php
             }
             ?>
