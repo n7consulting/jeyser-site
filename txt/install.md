@@ -38,7 +38,7 @@ You can use Debian / Ubuntu package `sudo apt-get install phantomjs`. However, b
 
 **Hard way** 
 
-Check that bzip2 and fontconfig (or libfontconfig depending on your distribution) is installed on your server. Otherwise, install it.
+Check that bzip2 and fontconfig (or libfontconfig depending on your distribution) is installed on your server. Otherwise, install them.
 
 Download PhantomJs archive `wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2`
 
@@ -52,7 +52,7 @@ Check that PhantomJS is well installed `phantomjs --version`
 
 ### Make repositories writable
 
-make app/cache/prod app/cache/dev app/logs/ app/sessions /uploads /web/documents /web/tmp writable by your www-data user.
+make `app/cache/prod` `app/cache/dev` `app/logs/` `app/sessions` `uploads`  `web/documents` `web/tmp` writable by your www-data user.
 
 ### Create databse schema and load data
 
