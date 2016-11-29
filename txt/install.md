@@ -27,6 +27,61 @@ cd Incipio
 composer install
 ```
 
+You will be asked to fill several parameters. Those parameters are stored in `app/config/parameters.yml` and can be modified at any time (don't forget to clear the cache, to apply your changes).
+
+Here is a detail of parameters
+```YML
+parameters:
+###configuration par defaut, local, wamp
+    database_driver:   pdo_mysql  #database driver
+    database_host:     localhost  #database host
+    database_port:     ~
+    database_name:     symfony  #database name (assume that you have created one before or used php app/console doctrine:database:create)
+    database_user:     root  #database user, it's better to create a specific user than using root.
+    database_password: ~  #password of database user
+    
+    mailer_transport:  mail  #How jeyser will deal with mails, don't change those parameters.
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+    
+    su_mail:      contact@N7consulting.fr  #email of superadmin user
+    su_username:  admin  #username of superadmin user. 
+    su_password:  admin  #password of superadmin user
+    
+    locale:            fr  #language of jeyser
+    secret:            ThisIsNotSecretYouKnow  #a string of random letters and numbers. Should be changed.
+    
+    tva:  0.200  # Taxe sur la valeur ajoputée (VAT) Rate.
+    role_voir_confidentiel: ROLE_CA # Role required to bypass confidentiality for projects. Don't change it unless you know what you do.
+
+###configuration de la Junior
+###annee1Incipio : première année d'utilisation d'incipio.
+    junior:
+        nom:          N7 Consulting  # Your JE name
+        abbr:         N7C  # A shortname for your JE
+        id:           ~
+        email:        contact@n7consulting.fr # main email of your JE
+        logo:         https://N7consulting.fr/themes/IOTH-bootstrap-basic/assets/images/logo_N7consulting.png  #a picture url.
+        adresse:      2 Rue Charles Camichel # Your JE postal address
+        url:          https://N7consulting.fr # link to your website
+        ga_tracking:  ~ #a google analytics id code if you want to setup analytics
+        authorizedStorageSize : 104857600 # how much storage your server can handle
+        domaineEmailEtu:    etu.enseeiht.fr #(sub)domain used for students email in your school
+        domaineEmailAncien: alumni.enseeiht.fr #(sub)domain usedfor alumni students in your school
+        anneeCreation: 1977 #year of creation of your JE
+        annee1Incipio: 2015 # year of first use of Jeyser
+        president:  #detailled in /fr/Doctypes
+            prenom: PrenomPrez
+            nom: NomPrez
+            male: true
+        tresorier:
+            prenom: PrenomTrez
+            nom: NomTrez
+            male: false
+```
+
+
 ### PhantomJS
 
 Jeyser CRM uses [PhantomJS](http://phantomjs.org) to render and export Gantt Charts for your documents. 
@@ -58,7 +113,7 @@ make `app/cache/prod` `app/cache/dev` `app/logs/` `app/sessions` `uploads`  `web
 
 Check that your database configuration in `app/config/parameters.yml` is correct.
 
-Create database schema : `php app/console doctrin:schema:create`
+Create database schema : `php app/console doctrine:schema:create`
 
 Load fixtures : `php app/console doctrine:fixtures:load`. That will create an admin account with credentials provided in `app/config.parameters.yml` (su_username and su_password).
 
