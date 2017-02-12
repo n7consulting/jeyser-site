@@ -1,0 +1,10 @@
+# The contents of this file are parsed and made available as
+# via `site.*`. So for example, {{ site.title }} can be used
+# in a template to get the contents of the `title` key.
+title: Jeyser CRM
+subtitle: Open source ERP / CRM for Junior Entreprises
+
+
+# Insert your disqus shortname
+#disqus:
+#    shortname:

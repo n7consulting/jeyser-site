@@ -1,0 +1,21 @@
+---
+layout: default
+title: Documentation française
+id: main
+use: [frs]
+description: Jeyser CRM documentation en français
+---
+
+            <div class="content" id="description">
+                <h1>Documentation FR</h1>
+                <p>All you need to know but <em>en français !</em></p>
+                <hr />
+            </div>
+            <p>L'idée principale de Jeyser est d'avoir un onglet par process fondamental de votre junior.</p>
+            <div class="content" id="editions">
+                {% for page in data.frs %}
+                <article>
+                    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                </article>
+                {% endfor %}
+            </div>

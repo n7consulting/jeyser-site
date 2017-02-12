@@ -1,0 +1,91 @@
+---
+layout: default
+title: Jeyser CRM
+---
+{% block content %}
+<h1>Jeyser CRM</h1>
+
+<p>Jeyser CRM in an open-source ERP / CRM for all Juniors-Entreprises. It is free and available for everyone. </p>
+<p>It is maintained by <a href="https://n7consulting.fr/">N7 Consulting</a>, <a href="http://www.enseeiht.fr/en/index.html">Enseeiht</a>'s Junior-Entreprises.</p>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active index-carousel-item">
+      <img src="/images/uploads/accueil.png" alt="Open source, Free ERP / CRM for Junior-entreprise" />
+      <div class="index-carousel-caption carousel-caption">
+        Open-source ERP / CRM for Junior-Entreprise
+      </div>
+    </div>
+    <div class="item index-carousel-item">
+      <img src="/images/uploads/competences.png" alt="Manage HR & skills" />
+      <div class="carousel-caption index-carousel-caption">
+        Manage HR and skills
+      </div>
+    </div>
+    <div class="item index-carousel-item">
+      <img src="/images/uploads/fiche_membre.png" alt="Manage your members" />
+      <div class="carousel-caption index-carousel-caption">
+        Manage your organisation members
+      </div>
+    </div>
+    <div class="item index-carousel-item">
+      <img src="/images/uploads/suivi_etudes.png" alt="Manage your business" />
+      <div class="carousel-caption index-carousel-caption">
+        Sales pipeline, business, CRM
+      </div>
+    </div>
+    <div class="item index-carousel-item">
+      <img src="/images/uploads/doctype.png" alt="Manage your documents and templates" />
+      <div class="carousel-caption index-carousel-caption">
+        Template your documents and edit them from Jeyser
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <h2><a href="/install">Install now !</a></h2>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <h2><a href="https://jeyser-demo.herokuapp.com">Test the demo !</a></h2>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <h2><a href="https://github.com/n7consulting/Incipio">Get the code !</a></h2>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <h2><a href="/fr/">Read the documentation ! (French)</a></h2>
+    </div>
+</div>
+
+
+<h3>More</h3>
+<p><a href="https://insight.sensiolabs.com/projects/b2a395d1-acaa-4305-a30e-3a326fdb7c3a"><img src="https://insight.sensiolabs.com/projects/b2a395d1-acaa-4305-a30e-3a326fdb7c3a/small.png" alt="SensioLabsInsight"></a></p>
+<p>Jeyser-CRM (also known as Incipio) is a project aiming at an open-source <a href="https://en.wikipedia.org/wiki/Customer_relationship_management">CRM</a> / <a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning">ERP</a> for all Junior Entreprises belonging or not to <a href="http://www.junior-entreprises.com/">CNJE</a> and <a href="http://www.jadenet.org/">JADE</a>.</p>
+ 
+{% endblock %}
+{% block scripts_after %}
+<script>
+
+$('.carousel').carousel()
+
+</script>
+{% endblock %}

@@ -1,0 +1,9 @@
+sculpin_content_types:
+    posts:
+        permalink: blog/:year/:month/:day/:filename/
+ 
+    frs:
+        type: path
+        singular_name: fr
+        permalink: fr/:slug_title/
+
