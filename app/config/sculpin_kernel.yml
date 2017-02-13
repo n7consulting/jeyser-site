@@ -6,4 +6,9 @@ sculpin_content_types:
         type: path
         singular_name: fr
         permalink: fr/:slug_title/
+ 
+    devs:
+        type: path
+        singular_name: dev
+        permalink: dev/:slug_title/
 
