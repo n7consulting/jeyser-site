@@ -6,6 +6,13 @@ title: Install
 
 #Install Jeyser CRM !
 
+Jeyser could be frightening to install. **It is not !** With only basics computer science knowledge and 5 commands, you can safely deploy it on your server. The Docker install even set a SSL certificate (https) for you !
+
+There are 2 ways to install Jeyser : 
+
+ - **The easy :** suited for beginners or non technical people, Docker
+ - **The custom :** requires some correct Linux and Apache knowledge.
+
 ## Hardware requirements
 
 To run Jeyser you need a server meeting the following requirements : 
@@ -17,12 +24,6 @@ To run Jeyser you need a server meeting the following requirements :
  
  
 We recommend the use of Ubuntu as your server Operating System. Our automatic install scripts are only tested on Ubuntu.
- 
- 
-There are 2 ways to install Jeyser : 
-
- - **The easy :** suited for beginners or non technical people, Docker
- - **The custom :** requires some correct Linux and Apache knowledge.
  
  
 ## Docker

@@ -1,6 +1,6 @@
 ---
 title: Docker Architecture
-lang: fr
+lang: en
 slug_title: docker-architecture
 ---
 

@@ -6,7 +6,7 @@ slug_title: suivi-etudes
  
 Le module de suivi d'étude vous permet de gérer vos projets au quotidien.
 
-Jeyser CRM vous propose un pipeline des ventes présentant tous les projets menés par votre junior. Dès cette page vous avezz accès aux informations essentielles sur vos projets.
+Jeyser CRM vous propose un pipeline des ventes présentant tous les projets menés par votre junior. Dès cette page vous avez accès aux informations essentielles sur vos projets.
 
 ![Suivi Etude](/images/uploads/pipeline_etudes.png){.img-thumbnail}
 

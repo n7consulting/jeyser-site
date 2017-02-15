@@ -4,26 +4,45 @@ lang: fr
 slug_title: documents-types
 ---
 
-Jeyser vous permet d'éditer et publiposter tous vos documents depuis le web. Pour cela, vous devez ajouter vos documents-types au format docx (Microsoft Word) dans l'espace d'administration.
+{% verbatim %}
 
-Vous devez utiliser le formalisme [Twig](http://twig.sensiolabs.org/) pour tout ce qui touche à la gestion des variables. Voici 2 documents à titre d'exemples.
+Jeyser vous permet d'éditer et publiposter tous vos documents depuis le web. Il utilise la puissance de [Twig](http://twig.sensiolabs.org/), le moteur de template de Symfony. N'hésitez pas à la consulter.
 
-[Exemple d'AP](https://github.com/in6pio/Incipio/files/12017/AP.docx)
-
-[Exemple de CC](https://github.com/in6pio/Incipio/files/12018/CC.docx)
-
-Les champs accessibles sont ceux utilisés dans les différentes entity du CRM. En voici une [liste](https://github.com/in6pio/Incipio/files/12024/dicoSuivi.txt). Vous disposez en plus des variables globales (définies dans parameters.yml):
-
- - tva : le taux de tva en cours en décimal (0.2 pour 20%)
- - president.prenom, president.prenom, le prenom et nom du president. president.male, un booléen selon que l'on ai un président ou une présidente, utile pour les bandeaux de signatures : `{%if junior.president.male%}Son Président, {% else %}Sa Présidente, {%endif%}`
- - la même chose mais avec tresorier. (tresorier.prenom ...)
- - junior, un tableau comprenant différentes informations sur la junior-entreprise. Tous les champs sont commentés dans `app/config/parameters.yml.dist`
+Pour plus de simplicité, Jeyser contient déjà quelques documents types d'exemples.[Exemple d'AP](https://github.com/in6pio/Incipio/files/12017/AP.docx) [Exemple de CC](https://github.com/in6pio/Incipio/files/12018/CC.docx)
 
 
+Les champs accessibles sont ceux utilisés dans les différentes entity du CRM. En voici une [liste](https://github.com/in6pio/Incipio/files/12024/dicoSuivi.txt). 
 
+### Paramètres
 
+Depuis la version 2.0.0 de Jeyser, vous pouvez régler certains de vos paramètres depuis l'espace web. Ces paramètres sont accessibles dans vos documents types via l'extension `param()`.
+
+Les paramètres disponibles sont : 
+
+ - **nom** le nom de votre junior-Entreprise
+ - **abbr** l'abbréviation de votre junior-entreprise
+ - **logo** l'url du logo de votre junior. Sert surtout pour la page de connexion et n'est pas très utile pour vos documents types.
+ - **adresse** l'adresse postale de votre junior-entreprise
+ - **url** l'url de votre site web
+ - **email** l'email de contact de votre junior-entreprise
+ - **domaineEmailEtu** le domaine des mails de vos etudiants (par exemple @etu.enseeiht.fr)
+ - **domaineEmailAncien** le domaine des mails des alumnis de votre école ( @alumni.enseeiht.fr)
+ - **presidentPrenom** le prénom du président
+ - **presidentNom** le nom du président
+ - **presidentTexte** un texte introductif précédent sa signature, (par exemple `Son président,`)
+ - **tresorierPrenom** similaire au champs ci-dessus
+ - **tresorierNom**
+ - **tresorierTexte**
+ - **tva** le taux de tva. La donnée est un chiffre et peux donc être directement utilisée dans vos calculs
+ - **anneCreation** l'année de création de votre junior
+ - **annee1Jeyser** l'année d'installation de Jeyser dans votre junior
+ - **gaTracking**  un code de suivi google-analytics
+
+Exemple : Mettre `{{ param('abbr') }}` dans votre document type affichera N7C.
+ 
+**Note :**
+ 
 ### balises spécifiques
-
 `{% TRfor %} {%endforTR %}` pour faire une boucle dans une ligne de tableau. Cf l'AP si vous avez besoin d'un exemple.
 
 `{% Pfor %} {%endforP %}` pour faire une boucle dans un paragraphe.
@@ -40,9 +59,9 @@ En plus des filtres Twig habituels, Jeyser comporte quelques filtres supplément
  
  - nbrToLetters qui transforme un nombre en lettre. `{{ (etude.montantHT * (1+tva)) | nbrToLetters(1) }}`
  
- - nl2wbr qui concerne les retours à la ligne du texte d'origine. `{{ etude.presentationProjet | nl2wbr | raw }}`
+ - nl2wbr qui conserve les retours à la ligne du texte d'origine. `{{ etude.presentationProjet | nl2wbr | raw }}`
  
- - le filtre liaision qui vous permet de transformer les de + voyelle en d''voyelle.
+ - le filtre liaision qui vous permet de transformer les `de + voyelle` en `d'voyelle`.
 
 
 ## FAQ
@@ -57,3 +76,5 @@ Attention à ne pas confondre différents caractères, comme le moins et le tire
 ### Comment faire pour les BV ?
 
 Le document type du BV ne peut pas être un document Excel car cela ne fonctionne pas. Il faut donc passer à un format Word. Cela se fait rapidement. Vous pouvez vous inspirer de la [vue d'un BV](https://github.com/n7consulting/Incipio/blob/master/src/Mgate/TresoBundle/Resources/views/BV/voir.html.twig) pour le refaire facilement. Pensez à TRfor pour le tableau.
+
+{% endverbatim %}
