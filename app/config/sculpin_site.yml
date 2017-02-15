@@ -3,7 +3,7 @@
 # in a template to get the contents of the `title` key.
 title: Jeyser CRM
 subtitle: Open source ERP / CRM for Junior Entreprises
-
+google_analytics_tracking_id: UA-42885916-10
 
 # Insert your disqus shortname
 #disqus:
