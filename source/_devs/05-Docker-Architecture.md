@@ -10,7 +10,7 @@ slug_title: docker-architecture
 
 Jeyser relies on Docker to create a standard layer to install itself. Here is a picture of all Jeyser containers and their use.
 
-[Container Architecture](/images/uploads/jeyser_cloudcraft.png){.img-thumbnail}
+![Container Architecture](/images/uploads/jeyser_cloudcraft.png){.img-thumbnail}
 
 As detailled in the docker-compose.yml we have :
 
