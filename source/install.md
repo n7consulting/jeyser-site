@@ -42,7 +42,7 @@ We can't make installation more easy than that. The only requirement is to know 
    git clone https://github.com/n7consulting/Incipio.git
    cd Incipio
    # get the latest release number on https://github.com/n7consulting/Incipio/releases
-   git checkout 2.0.0
+   git checkout v2.0.0-beta3
    #run the docker installer
    chmod u+x var/install/initial-setup_ubuntu16.sh
    ./var/install/initial-setup_ubuntu16.sh
