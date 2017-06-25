@@ -1,0 +1,32 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+entries:
+- title: 
+  singles: # N7C addition for single link in sidebar
+
+  - title: Home
+    output: web
+    url: /
+
+  - title: French documentation
+    output: web
+    url: /fr/
+
+  - title: Developer resources
+    output: web
+    url: /dev/
+
+  
+
+
+# entries:
+#   - title: Sidebar
+#     levels: one
+#   - title: Home
+#     output: web
+#     url: /index.html
+# - title: French Documentation
+#   url: /fr
+#   output: web
+# - title: Developer guide
+#   url: /dev
+#   output: web

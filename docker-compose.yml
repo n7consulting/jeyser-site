@@ -1,0 +1,7 @@
+web:
+  build: .
+  volumes:
+    - .:/src 
+  ports:
+    - 4000:4000 
+  command: ["serve", "-H", "0.0.0.0"]

@@ -1,6 +1,6 @@
 # Jeyser site
 
-Code source of static Jeyser CRM website. 
+Code of Jeyser CRM website, hosted on github pages. 
 
 
 # Run it
@@ -8,8 +8,7 @@ Code source of static Jeyser CRM website.
 git clone https://github.com/n7consulting/jeyser-site.git
 
 cd jeyser-site
-composer install
-./vendor/bin/sculpin generate --watch --server
+docker-compose up
 ```
 
 All contributions are welcomed !
