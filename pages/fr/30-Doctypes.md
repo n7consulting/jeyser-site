@@ -70,7 +70,7 @@ En plus des filtres Twig habituels, Jeyser comporte quelques filtres supplément
 ### Avertissement
 
 Word modifie parfois les caractères que vous saisissez pour des raisons esthétiques (remplacement de ' par \` ou de " par \`\` ). Or ces caractères lèveront des erreurs. 
-Faites bien attention à utiliser ' et " (apostrophe simple et double) et non ` et \`\` (signe de citation simple et double).
+Faites bien attention à utiliser ' et " (apostrophe simple et double) et non \` et \`\` (signe de citation simple et double).
 
 ## FAQ
 
