@@ -1,0 +1,11 @@
+@import './generic';
+@import './cover';
+@import './ecosystem';
+@import './giants';
+@import './references';
+
+.hidden-small {
+  @include mq($max-width: $vw-small) {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+set -ex
+cd "$(dirname "$0")/../"
+
+# Remove previous documentation
+
+rm -fr src/pages/docs
+
+# Checkout documentation
+
+git clone https://github.com/api-platform/docs.git src/pages/docs
+
+# Generate "nav.yml"
+
+bin/generate-nav

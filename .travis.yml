@@ -1,0 +1,12 @@
+language: node
+
+cache:
+  yarn: true
+
+before_install:
+  - yarn install
+  - bin/retrieve-documentation
+
+script:
+  - yarn lint
+  - yarn gatsby build
