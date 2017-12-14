@@ -27,4 +27,8 @@ export const trustUs = [
     name: 'Aplicaen',
     logo: 'aplicaen',
   },
+  {
+    name: 'TAEP',
+    logo: 'taep',
+  },
 ];
