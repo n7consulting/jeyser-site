@@ -8,7 +8,7 @@ rm -fr src/pages/docs
 
 # Checkout documentation
 
-git clone https://github.com/api-platform/docs.git src/pages/docs
+git clone https://github.com/n7consulting/jeyser-docs.git src/pages/docs
 
 # Generate "nav.yml"
 
