@@ -13,7 +13,7 @@ const Cover = () => (
           empty
           text="Install"
           icon=""
-          link="/dev/install"
+          link="/docs/install"
         />
         <Button
           text="Demo"
