@@ -11,7 +11,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    'gatsby-plugin-sitemap',
+    // 'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     {
       resolve: 'gatsby-plugin-manifest',
