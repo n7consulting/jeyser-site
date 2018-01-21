@@ -50,13 +50,6 @@
     z-index: z("below");
   }
   @include mq($min-height: 800px, $orientation: landscape) {
-    .cover__content {
-      padding-top: calc(55vh - 40px);
-
-      &:before {
-        height: 30vh;
-      }
-    }
 
     .cover__circle {
       width: 730px;
