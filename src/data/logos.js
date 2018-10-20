@@ -31,4 +31,16 @@ export const trustUs = [
     name: 'TAEP',
     logo: 'taep',
   },
+  {
+    name: 'Sprint JE',
+    logo: 'sprint-je',
+  },
+  {
+    name: 'Pulce',
+    logo: 'pulce',
+  },
+  {
+    name: 'TN Services',
+    logo: 'tnservices',
+  },
 ];
