@@ -4,6 +4,10 @@ export const trustUs = [
     logo: 'mgate',
   },
   {
+    name: 'Emagine',
+    logo: 'emagine',
+  },
+  {
     name: 'N7 Consulting',
     logo: 'n7consulting',
   },
@@ -34,6 +38,10 @@ export const trustUs = [
   {
     name: 'Sprint JE',
     logo: 'sprint-je',
+  },
+  {
+	  name: 'Junior ISEN Toulon',
+	  logo: 'junior-isen-toulon',
   },
   {
     name: 'Pulce',
