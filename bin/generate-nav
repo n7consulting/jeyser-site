@@ -15,5 +15,4 @@ loadedOutline.chapters.forEach((directory) => {
 
     docs.chapters.push({ ...directory, items });
 });
-console.log(docs)
 writeFile(resolve(__dirname, '../src/pages/docs/nav.yml'), jsyaml.safeDump(docs, { lineWidth: 255 }), error => error && console.warn(error));

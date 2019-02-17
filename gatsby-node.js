@@ -97,6 +97,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             localUrls.push(matches[2]);
         }
 
+        // Uniquify the array
+        localUrls = localUrls.filter(function (value, index, self) {
+            return self.indexOf(value) === index;
+        });
         localUrls.map(url => {
             let newUrl = url.replace('.md', '/');
             newUrl = `/${URL.resolve(nodePath, newUrl)}`;
