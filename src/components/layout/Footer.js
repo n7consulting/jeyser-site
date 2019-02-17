@@ -14,6 +14,7 @@ class Footer extends Component {
           <a
             href="https://github.com/api-platform/website"
             target="_blank"
+            rel="noopener noreferrer"
           >
             API Platform
           </a>

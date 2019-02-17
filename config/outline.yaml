@@ -1,0 +1,42 @@
+chapters:
+  - title: Install & update Jeyser
+    path: install
+    items:
+      - id: environment
+      - id: index
+      - id: update
+      - id: annexes
+  - title: "Features (french)"
+    path: features-fr
+    items:
+      - id: gestion-associative
+      - id: suivi-projet
+      - id: prospection
+      - id: rh
+      - id: tresorerie
+      - id: formations
+      - id: indicateurs
+      - id: documents-types
+      - id: documents-types-faq
+      - id: administration
+      - id: gdpr
+  - title: User guides
+    path: user-guides
+    items:
+      - id: index
+      - id: after-install
+      - id: add-your-own
+  - title: Development
+    path: dev
+    items:
+      - id: about
+      - id: faq
+      - id: contributing
+      - id: docker-architecture
+      - id: demo-data
+  - title: News
+    path: news
+    items:
+      - id: 2017-06-17-fluor-release
+      - id: 2017-06-13-oxygen-release
+      - id: 2017-05-17-oxygen-beta3-release

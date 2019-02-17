@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import easyImage from 'images/easy_component.svg';
-import apiImage from 'images/api_component.svg';
-import solidImage from 'images/solid_component.svg';
-import openSourceImage from 'images/opensource_component.svg';
-import Button from 'components/common/Button';
+import easyImage from '../../images/easy_component.svg';
+import apiImage from '../../images/api_component.svg';
+import solidImage from '../../images/solid_component.svg';
+import openSourceImage from '../../images/opensource_component.svg';
+import Button from '../../components/common/Button';
 
 const EcosystemCard = ({ big, image, link, text, title }) => (
   <div className={classnames('grid__item', { full: big })}>

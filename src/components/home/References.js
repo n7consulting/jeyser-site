@@ -1,5 +1,5 @@
 import React from 'react';
-import { trustUs } from 'data/logos';
+import { trustUs } from '../../data/logos';
 
 const otherList = trustUs.map(({ name, logo }) => (
   <div key={name} className="references__item">

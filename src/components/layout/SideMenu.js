@@ -1,7 +1,7 @@
 import React from 'react';
-import links from 'data/menu';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import links from '../../data/menu';
 import Logo from './Logo';
 import Search from './Search';
 import MenuItem from './MenuItem';
@@ -12,8 +12,7 @@ const SideMenu = ({ open }) => (
   <div className={classNames('side-menu', { open })}>
     <div className="side-menu__top">
       <div className="side-menu__logo">
-        <div className="logo__circle">
-        </div>
+        <div className="logo__circle" />
         <Logo className="logo__text" />
       </div>
       <Search className="side-menu__search" />

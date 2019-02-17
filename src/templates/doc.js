@@ -1,61 +1,51 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import DocNav from 'components/layout/DocNav';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout';
+import DocNav from '../components/layout/DocNav';
+import nav from '../pages/docs/nav.yml';
 
-const Template = ({ data, pathContext }) => (
-  <div className="page__docs">
-    <Helmet title={(pathContext.current && pathContext.current.title) || 'Documentation'} />
-    <div className="container docs__content">
-      <div dangerouslySetInnerHTML={{ __html: data.post.html }} />
-    </div>
-    <div className="container docs__nav">
-      {pathContext.prev && (
-        <Link className="prev" to={`/${pathContext.prev.path}`}>
-          <i className="icon-chevron-left" />
-          <span>{pathContext.prev.title}</span>
-        </Link>
-      )}
-      {pathContext.next && (
-        <Link className="next" to={`/${pathContext.next.path}`}>
-          <span>{pathContext.next.title}</span>
-          <i className="icon-chevron-right" />
-        </Link>
-      )}
-    </div>
-    <DocNav nav={data.navDoc.edges} />
-  </div>
+const Template = ({ location, pageContext }) => (
+    <Layout location={location}>
+      <div className="page__docs">
+        <Helmet title={(pageContext.title && pageContext.title) || 'Documentation'} />
+        <div className="container docs__content">
+          <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
+          <div>
+            <p>
+              <a
+                  href={`https://github.com/n7consulting/jeyser-docs/edit/${process.env.GATSBY_BRANCH_NAME || 'master'}/${
+                      pageContext.editPath
+                      }`}
+              >
+                You can also help us improving the documentation of this page.
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="container docs__nav">
+            {pageContext.previous.slug && (
+                <Link className="prev" to={`/${pageContext.previous.slug}`}>
+                  <i className="icon-chevron-left" />
+                  <span>{pageContext.previous.title}</span>
+                </Link>
+            )}
+            {pageContext.next.slug && (
+                <Link className="next" to={`/${pageContext.next.slug}`}>
+                  <span>{pageContext.next.title}</span>
+                  <i className="icon-chevron-right" />
+                </Link>
+            )}
+        </div>
+        <DocNav nav={nav.chapters} location={location} />
+      </div>
+    </Layout>
 );
 
 export default Template;
 
 Template.propTypes = {
-  data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    pageContext: PropTypes.object.isRequired,
 };
-
-// eslint-disable-next-line no-undef
-export const pageQuery = graphql`
-  query DocByPath($path: String!) {
-    post: markdownRemark(fields: { path: { eq: $path } }) {
-      html
-    }
-    navDoc: allNavYaml {
-      edges {
-        node {
-          title
-          path
-          items {
-            id
-            title
-            anchors {
-              id
-              title
-            }
-          }
-        }
-      }
-    }
-  }
-`;
