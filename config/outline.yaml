@@ -6,9 +6,10 @@ chapters:
       - id: index
       - id: update
       - id: annexes
-  - title: "Features (french)"
+  - title: Features (french)
     path: features-fr
     items:
+      - id: index
       - id: gestion-associative
       - id: suivi-projet
       - id: prospection
@@ -29,6 +30,7 @@ chapters:
   - title: Development
     path: dev
     items:
+      - id: index
       - id: about
       - id: faq
       - id: contributing
@@ -37,6 +39,11 @@ chapters:
   - title: News
     path: news
     items:
+      - id: index
+      - id: 2019-01-13-sulfur-release
+      - id: 2018-12-13-phosphorus-patch-2-release
+      - id: 2018-12-09-phosphorus-patch-1-release
+      - id: 2018-09-02-phosphorus-release
       - id: 2017-06-17-fluor-release
       - id: 2017-06-13-oxygen-release
       - id: 2017-05-17-oxygen-beta3-release
