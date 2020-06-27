@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="footer openable">
         <p className="footer__copyright">
-          Content Copyright © 2017{' '}
+          Content Copyright © 2020{' '}
           Jeyser CRM
         </p>
         <p className="footer__tilleuls">

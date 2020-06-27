@@ -34,6 +34,7 @@ chapters:
       - id: about
       - id: faq
       - id: contributing
+      - id: local-development
       - id: docker-architecture
       - id: demo-data
   - title: News
