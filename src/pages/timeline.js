@@ -23,12 +23,13 @@ const Event = ({ title, text, color, size }) => (
 Event.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
-  color: PropTypes.string.isRequired,
-  size: PropTypes.string,
+  color: PropTypes.string,
+  size: PropTypes.string.isRequired,
 };
 
 Event.defaultProps = {
   color: colors.Patch,
+  text: '',
 };
 
 const TimelinePage = () => (

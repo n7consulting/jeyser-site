@@ -20,6 +20,7 @@ SupportCard.defaultProps = {
 };
 
 const SupportPage = props => (
+  /* eslint-disable-next-line react/prop-types */
   <Layout location={props.location}>
     <div className="support">
       <Helmet title="Support" />
@@ -53,10 +54,11 @@ const SupportPage = props => (
           </SupportCard>
           <SupportCard title="Email" >
             <p>
-              Have a specific or confidential question, a security issue or just prefer email to chat,
-              reach our main technical team directly at dsi[at]n7consulting.fr.
+              Have a specific or confidential question, a security issue
+              or just prefer email to chat, reach our main technical team
+              directly at dsi[at]n7consulting.fr.
               <br /><br />
-              You won't disturb us, we are always very happy to exchange about Jeyser!
+              You will not disturb us, we are always very happy to exchange about Jeyser!
             </p>
           </SupportCard>
         </div>

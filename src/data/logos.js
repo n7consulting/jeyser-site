@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const trustUs = [
   {
     name: 'M-Gate',
@@ -40,8 +41,8 @@ export const trustUs = [
     logo: 'sprint-je',
   },
   {
-	  name: 'Junior ISEN Toulon',
-	  logo: 'junior-isen-toulon',
+    name: 'Junior ISEN Toulon',
+    logo: 'junior-isen-toulon',
   },
   {
     name: 'Pulce',
