@@ -4,8 +4,11 @@ const fileProcessor = require('../src/lib/fileProcessor');
 const { readFileSync, writeFile } = require('fs');
 const { resolve } = require('path');
 const jsyaml = require('js-yaml');
+const {docPagesDirectory} = require('../constants');
 
-const loadedOutline = jsyaml.safeLoad(readFileSync(`${__dirname}/../config/outline.yaml`, 'utf8'));
+const dir = `${docPagesDirectory}${versionDirectory}`;
+const outlinePath = `${dir}/outline.yaml`;
+const loadedOutline = jsyaml.safeLoad(readFileSync(outlinePath, 'utf8'));
 const docs = { chapters: [] };
 
 loadedOutline.chapters.forEach((directory) => {
