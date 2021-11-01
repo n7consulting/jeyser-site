@@ -40,17 +40,6 @@ const SupportPage = props => (
                 Github
               </a>.
             </p>
-            <br />
-            <p>
-              Chat on our {' '}
-              <a
-                href="https://gitter.im/jeyser-crm/Lobby"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gitter
-              </a>.
-            </p>
           </SupportCard>
           <SupportCard title="Email" >
             <p>
