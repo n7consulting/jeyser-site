@@ -6,7 +6,7 @@ const { resolve } = require('path');
 const jsyaml = require('js-yaml');
 const {docPagesDirectory} = require('../constants');
 
-const dir = `${docPagesDirectory}${versionDirectory}`;
+const dir = `${docPagesDirectory}`;
 const outlinePath = `${dir}/outline.yaml`;
 const loadedOutline = jsyaml.safeLoad(readFileSync(outlinePath, 'utf8'));
 const docs = { chapters: [] };

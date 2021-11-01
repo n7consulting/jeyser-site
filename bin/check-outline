@@ -5,7 +5,9 @@ const {lstatSync, readdirSync, readFileSync, writeFile, statSync} = require('fs'
 const {join, resolve} = require('path');
 const jsYaml = require('js-yaml');
 
-const loadedOutline = jsYaml.safeLoad(readFileSync(`${__dirname}/../config/outline.yaml`, 'utf8'));
+const dir = `${docPagesDirectory}`;
+const outlinePath = `${dir}/outline.yaml`;
+const loadedOutline = jsYaml.safeLoad(readFileSync(outlinePath, 'utf8'));
 const directories = (() => readdirSync(docPagesDirectory).filter(
         folder => statSync(join(docPagesDirectory, folder)).isDirectory() && '.' !== folder[0])
 )();
