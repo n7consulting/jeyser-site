@@ -32,6 +32,7 @@
     "webpack": "^4.28.1"
   },
   "devDependencies": {
+    "@xmldom/xmldom": "^0.7.0",
     "babel-eslint": "^8.0.1",
     "eslint": "^4.4.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -53,7 +54,6 @@
     "markdown": "^0.5.0",
     "prettier": "^1.5.2",
     "remark-inline-links": "^3.0.4",
-    "xmldom": "^0.5.0",
     "xpath": "^0.0.24"
   },
   "scripts": {
