@@ -19,26 +19,26 @@ const NavItemLink = ({ path, anchors, title, current, location }) => {
       >
         <ul>
           {anchors.map((item) => {
-                      const link = `${path}#${item.id}`;
-                      return (
-                        <li
-                          key={link}
-                          className={classNames('submenu-item__link', {
-                                  current: '' !== location.hash && `#${item.id}` === location.hash,
-                              })}
-                        >
-                          <Link to={link}>{item.title}</Link>
-                          {item.anchors && (
-                          <NavSubItemLink
-                            path={path}
-                            anchors={item.anchors}
-                            title={item.title}
-                            location={location}
-                          />
-                              )}
-                        </li>
-                      );
-                  })}
+            const link = `${path}#${item.id}`;
+            return (
+              <li
+                key={link}
+                className={classNames('submenu-item__link', {
+                  current: '' !== location.hash && `#${item.id}` === location.hash,
+                })}
+              >
+                <Link to={link}>{item.title}</Link>
+                {item.anchors && (
+                <NavSubItemLink
+                  path={path}
+                  anchors={item.anchors}
+                  title={item.title}
+                  location={location}
+                />
+                )}
+              </li>
+            );
+          })}
         </ul>
       </Collapsible>
     );

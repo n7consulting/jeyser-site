@@ -16,8 +16,8 @@ const Template = ({ location, pageContext }) => (
           <p>
             <a
               href={`https://github.com/n7consulting/jeyser-docs/edit/${process.env.GATSBY_BRANCH_NAME || 'master'}/${
-                      pageContext.editPath
-                      }`}
+                pageContext.editPath
+              }`}
             >
               You can also help us improving the documentation of this page.
             </a>
@@ -30,13 +30,13 @@ const Template = ({ location, pageContext }) => (
           <i className="icon-chevron-left" />
           <span>{pageContext.previous.title}</span>
         </Link>
-            )}
+        )}
         {pageContext.next.slug && (
         <Link className="next" to={`${pageContext.next.slug}`}>
           <span>{pageContext.next.title}</span>
           <i className="icon-chevron-right" />
         </Link>
-            )}
+        )}
       </div>
       <DocNav nav={nav.chapters} location={location} />
     </div>

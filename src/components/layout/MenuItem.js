@@ -37,30 +37,30 @@ MenuItemLink.defaultProps = {
 const MenuItem = ({ text, path, submenu }) => (
   <Location>
     {({ location }) => {
-            const current = location.pathname.includes(path);
-            return (
-              <div
-                className={classNames('menu-item', {
-                        withSubmenu: submenu,
-                        current,
-                    })}
-              >
-                <MenuItemLink text={text} path={path}>
-                  <span>{text}</span>
-                  {submenu && <i className="icon-chevron-circle-down" />}
-                </MenuItemLink>
-                {submenu && (
-                <div className="menu-item__submenu">
-                  {submenu.map(({ text: itemText, path: itemPath }) => (
-                    <Link key={itemText} to={itemPath} className="submenu__item">
-                      {itemText}
-                    </Link>
-                            ))}
-                </div>
-                    )}
-              </div>
-            );
-        }}
+      const current = location.pathname.includes(path);
+      return (
+        <div
+          className={classNames('menu-item', {
+            withSubmenu: submenu,
+            current,
+          })}
+        >
+          <MenuItemLink text={text} path={path}>
+            <span>{text}</span>
+            {submenu && <i className="icon-chevron-circle-down" />}
+          </MenuItemLink>
+          {submenu && (
+          <div className="menu-item__submenu">
+            {submenu.map(({ text: itemText, path: itemPath }) => (
+              <Link key={itemText} to={itemPath} className="submenu__item">
+                {itemText}
+              </Link>
+            ))}
+          </div>
+          )}
+        </div>
+      );
+    }}
   </Location>
 );
 

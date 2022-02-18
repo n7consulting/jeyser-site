@@ -10,19 +10,23 @@ import '../styles/main.scss';
 import helmetConfig from '../helmetConfig';
 
 class Layout extends Component {
-  state = {
-    showResponsiveMenu: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      showResponsiveMenu: false,
+    };
+  }
 
   showMenu = (open) => {
-    this.setState(prevState => ({ ...prevState, showResponsiveMenu: open }));
+    this.setState((prevState) => ({ ...prevState, showResponsiveMenu: open }));
   };
 
   render() {
     const { children, location } = this.props;
-    const open = this.state.showResponsiveMenu;
-    const withFooter = (-1 === location.pathname.search('/docs') || !location.key);
+    const { showResponsiveMenu: open } = this.state;
+    const withFooter = ((-1 === location.pathname && location.pathname.search('/docs')) || !location.key);
 
+    /* eslint-disable react/jsx-props-no-spreading */
     return (
       <div className={classNames('main full', { open })}>
         <div className="full">
@@ -43,6 +47,7 @@ class Layout extends Component {
         <SideMenu open={open} />
       </div>
     );
+    /* eslint-enable react/jsx-props-no-spreading */
   }
 }
 

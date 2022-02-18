@@ -12,7 +12,8 @@ const Event = ({ title, text, color, size }) => (
   <div className={['event', size]}>
     <span className="point">
       <span className="point-1" style={{ backgroundColor: color }} />
-      <span className="point-2" style={{ backgroundColor: color }} />&nbsp;
+      <span className="point-2" style={{ backgroundColor: color }} />
+&nbsp;
     </span>
     <strong>{title}</strong>
     <small>{text}</small>
@@ -52,8 +53,8 @@ const TimelinePage = () => (
       title="04/02/2017: Docker installation"
       color={colors.Major}
       size={15}
-      text={'The Docker installation is the starting point of a larger adoption by other Junior-Entreprises.' +
-               ' It drastically reduces the installation complexity and provides a secure way to install and run Jeyser'}
+      text={'The Docker installation is the starting point of a larger adoption by other Junior-Entreprises.'
+               + ' It drastically reduces the installation complexity and provides a secure way to install and run Jeyser'}
     />
 
     <Event
@@ -62,7 +63,6 @@ const TimelinePage = () => (
       size={15}
       text="Jeyser catches back current Symfony version (at the time,Symfony 3)"
     />
-
 
     <Event title="12/10/2015: First commit from N7 Consulting" color={colors.Major} size={15} text="" />
 

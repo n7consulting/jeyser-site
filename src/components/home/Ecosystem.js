@@ -5,7 +5,7 @@ import easyImage from '../../images/easy_component.svg';
 import apiImage from '../../images/api_component.svg';
 import solidImage from '../../images/solid_component.svg';
 import openSourceImage from '../../images/opensource_component.svg';
-import Button from '../../components/common/Button';
+import Button from '../common/Button';
 
 const EcosystemCard = ({ big, image, link, text, title }) => (
   <div className={classnames('grid__item', { full: big })}>
@@ -44,7 +44,9 @@ const Ecosystem = () => (
   <section className="home__part home__ecosystem">
     <div className="container">
       <h1 className="ecosystem__title">
-        <strong>Jeyser</strong> CRM
+        <strong>Jeyser</strong>
+        {' '}
+        CRM
       </h1>
       <h5>
         Jeyser CRM is a free management software for Junior-Entreprises.

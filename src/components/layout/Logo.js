@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/* eslint-disable max-len indent */
+/* eslint-disable max-len */
 
 const Logo = () => (
   <svg
@@ -70,7 +70,7 @@ const Logo = () => (
         <flowRoot
           id="flowRoot3800"
         >
-          <flowRegion id="flowRegion3802" >
+          <flowRegion id="flowRegion3802">
             <rect
               id="rect3804"
               width="481.42856"

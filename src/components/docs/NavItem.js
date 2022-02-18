@@ -16,29 +16,29 @@ const NavItem = ({ item, location, current, onClick }) => {
       transitionTime={500}
       open={open}
       easing="ease"
-      trigger={
+      trigger={(
         <div className="item__title" role="presentation" onClick={() => onClick(path)}>
           <h2 key={path}>{title}</h2>
           <i className={`icon-chevron-${open ? 'top' : 'down'}`} />
         </div>
-            }
+      )}
     >
       <ul className="menu-item__list">
         {items.map((navItem) => {
-                    const link = 'index' === navItem.id ? `/docs/${path}/` : `/docs/${path}/${navItem.id}/`;
-                    const active = link === location.pathname;
-                    return (
-                      <li key={link} className={classNames('menu-item__link', { active })}>
-                        <NavItemLink
-                          path={link}
-                          anchors={navItem.anchors}
-                          title={navItem.title}
-                          current={active}
-                          location={location}
-                        />
-                      </li>
-                    );
-                })}
+          const link = 'index' === navItem.id ? `/docs/${path}/` : `/docs/${path}/${navItem.id}/`;
+          const active = link === location.pathname;
+          return (
+            <li key={link} className={classNames('menu-item__link', { active })}>
+              <NavItemLink
+                path={link}
+                anchors={navItem.anchors}
+                title={navItem.title}
+                current={active}
+                location={location}
+              />
+            </li>
+          );
+        })}
       </ul>
     </Collapsible>
   ) : (

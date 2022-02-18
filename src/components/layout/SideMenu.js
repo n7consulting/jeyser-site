@@ -6,7 +6,8 @@ import Logo from './Logo';
 import Search from './Search';
 import MenuItem from './MenuItem';
 
-const nav = links.map(link => <MenuItem key={link.text} {...link} />);
+// eslint-disable-next-line react/jsx-props-no-spreading
+const nav = links.map((link) => <MenuItem key={link.text} {...link} />);
 
 const SideMenu = ({ open }) => (
   <div className={classNames('side-menu', { open })}>

@@ -7,8 +7,8 @@ import Ecosystem from '../components/home/Ecosystem';
 import Giants from '../components/home/Giants';
 import References from '../components/home/References';
 
-const IndexPage = props => (
-  <Layout location={props.location}>
+const IndexPage = (location) => (
+  <Layout location={location}>
     <div className="home">
       <Helmet title="Open source ERP/CRM for Junior-Entreprises" />
       <Cover />
