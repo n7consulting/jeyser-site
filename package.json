@@ -19,7 +19,7 @@
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-transformer-sharp": "^4.7",
     "gatsby-transformer-yaml": "^4.7",
-    "node-sass": "^6.0.0",
+    "sass": "^1.49",
     "normalize.css": "^7.0.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
@@ -63,7 +63,6 @@
     "serve": "gatsby serve",
     "format": "eslint --fix 'src/**/*.js'",
     "lint": "eslint .",
-    "postinstall": "npm rebuild node-sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
