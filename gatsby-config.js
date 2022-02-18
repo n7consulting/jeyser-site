@@ -27,7 +27,6 @@ module.exports = {
             src: '/jeyser-icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
-            density: '4.0',
           },
         ],
       },

@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 
 class Footer extends Component {
   componentDidMount() {}
+
   render() {
     return (
       <footer className="footer openable">
         <p className="footer__copyright">
-          Content Copyright © 2020{' '}
+          Content Copyright © 2020
+          {' '}
           Jeyser CRM
         </p>
         <p className="footer__tilleuls">
-          Design (MIT) largely inspired on{' '}
+          Design (MIT) largely inspired on
+          {' '}
           <a
             href="https://github.com/api-platform/website"
             target="_blank"

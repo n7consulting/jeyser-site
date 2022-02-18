@@ -11,7 +11,9 @@ const References = () => (
   <section className="home__part home__references">
     <div className="container references__container">
       <h1 className="references__title">
-        They use <strong>Jeyser CRM</strong>
+        They use
+        {' '}
+        <strong>Jeyser CRM</strong>
       </h1>
       <div className="references__list list__other">{otherList}</div>
     </div>

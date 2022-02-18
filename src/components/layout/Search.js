@@ -4,9 +4,10 @@ import classNames from 'classnames';
 import scriptLoader from 'react-async-script-loader';
 
 class Search extends React.Component {
-  componentWillReceiveProps({ isScriptLoaded, isScriptLoadSucceed }) {
-    if (isScriptLoaded && !this.props.isScriptLoaded) {
-      if (isScriptLoadSucceed) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { isScriptLoaded } = this.props;
+    if (nextProps.isScriptLoaded && !isScriptLoaded) {
+      if (nextProps.isScriptLoadSucceed) {
         this.initDocSearch();
       }
     }
@@ -19,6 +20,7 @@ class Search extends React.Component {
       this.initDocSearch();
     }
   }
+
   /* eslint-disable no-undef */
   initDocSearch() {
     if (docsearch) {

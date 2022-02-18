@@ -5,7 +5,8 @@ import Logo from './Logo';
 import Search from './Search';
 import MenuItem from './MenuItem';
 
-const nav = links.map(link => <MenuItem key={link.text} {...link} />);
+// eslint-disable-next-line react/jsx-props-no-spreading
+const nav = links.map((link) => <MenuItem key={link.text} {...link} />);
 
 const Header = () => (
   <header className="header openable">

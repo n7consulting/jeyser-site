@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../components/common/Button';
-import Logo from '../../components/layout/Logo';
+import Button from '../common/Button';
+import Logo from '../layout/Logo';
 
 const Cover = () => (
   <section className="home__cover full">

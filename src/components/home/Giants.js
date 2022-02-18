@@ -14,7 +14,12 @@ const Giants = () => (
   <section className="home__part home__giants">
     <div className="container giants__container">
       <h1 className="giants__title">
-        By <strong>Juniors</strong>, for <strong>Juniors</strong>
+        By
+        {' '}
+        <strong>Juniors</strong>
+        , for
+        {' '}
+        <strong>Juniors</strong>
       </h1>
       <article className="giants__content">
         <p className="hidden-small">
@@ -22,7 +27,8 @@ const Giants = () => (
           both belonging to the France Junior-Entreprise top 30.
           Jeyser is rated with a platinum medal by SensioLabs, which certifies its quality
           (from a developer point of view).
-          <br /><br />
+          <br />
+          <br />
           Here are a few points which seems important to us:
         </p>
         <HomeList data={data} className="giants__list" />

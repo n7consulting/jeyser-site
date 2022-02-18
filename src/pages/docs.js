@@ -46,8 +46,8 @@ RenderList.propTypes = {
   path: PropTypes.string.isRequired,
 };
 
-const DocsPage = props => (
-  <Layout location={props.location}>
+const DocsPage = (location) => (
+  <Layout location={location}>
     <div className="page__docs">
       <Helmet title="Jeyser CRM Documentation" />
       <div className="container docs__content">
@@ -65,7 +65,7 @@ const DocsPage = props => (
           );
         })}
       </div>
-      <DocNav nav={nav.chapters} location={props.location} />
+      <DocNav nav={nav.chapters} location={location} />
     </div>
   </Layout>
 );
