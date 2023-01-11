@@ -48,7 +48,7 @@
     "gatsby-remark-images": "^6.7",
     "gatsby-remark-responsive-image": "^1.0.0-alpha13-alpha.435e0178",
     "gatsby-source-filesystem": "^4.7",
-    "gatsby-transformer-remark": "^5.7",
+    "gatsby-transformer-remark": "^5.25",
     "h5o": "^0.11.3",
     "js-yaml": "^3.10.0",
     "jsdom": "^19.0",
